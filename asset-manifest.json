@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/smarthood/event-adder/static/css/main.9311168e.css",
+    "main.js": "/smarthood/event-adder/static/js/main.405ee256.js",
+    "index.html": "/smarthood/event-adder/index.html",
+    "main.9311168e.css.map": "/smarthood/event-adder/static/css/main.9311168e.css.map",
+    "main.405ee256.js.map": "/smarthood/event-adder/static/js/main.405ee256.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9311168e.css",
+    "static/js/main.405ee256.js"
+  ]
+}
