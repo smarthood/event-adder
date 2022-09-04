@@ -1,7 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Edu+VIC+WA+NT+Beginner:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
 .App {
   text-align: center;
 }
-
+a{
+  text-decoration: none;
+  color: inherit;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
