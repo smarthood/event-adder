@@ -21,7 +21,6 @@ import Navbar from './Navbar';
 
 export default function Main() {
     const [value, setValue] = useState(new Date());
-    const [description,setDescription]=useState()
     const [eName,setEName]=useState()
     const [eOrg,setEOrg]=useState()
     const [eUrl,setEUrl]=useState("null")
@@ -38,7 +37,7 @@ export default function Main() {
           { method: "POST", body: JSON.stringify(dataSend) }) //send to Api
           .then(res => res.json()).then((a) => {
             setEUrl(a.url) //See response
-            toast("image uploaded!")
+            toast("File uploaded!")
           }).catch(e => console.log(e)) // Or Error in console
       }
     }
@@ -50,11 +49,10 @@ export default function Main() {
         eurl: eUrl,
         enid: eid,
         edate: value,
-        edesc: description
       },(err)=>{
         console.log(err)
       })
-      .then(toast("Submitted Successfully!"))
+      .then(toast.success("You event id is: "+eid))
       document.getElementById("frm").reset()
       setValue(new Date())
     console.log("made by smart",eid)
@@ -119,7 +117,6 @@ export default function Main() {
       </Box>
     <TextField id="outlined-basic" label="Event name" onChange={(e) => setEName(e.target.value)} variant="outlined" required sx={{marginTop:"20px",width:"400px"}}/>
     <TextField id="outlined-basic" label="Event organizer" onChange={(e) => setEOrg(e.target.value)} variant="outlined" required sx={{marginTop:"20px",width:"400px"}}/>
-    <TextField id="outlined-basic" label="Event Details" onChange={(e)=>setDescription(e.target.value)} variant="outlined"  sx={{marginTop:"20px",width:"400px"}}/>
    
     <Box sx={{marginTop:"20px",width:"400px"}}>
     <LocalizationProvider dateAdapter={AdapterDateFns} >

@@ -41,7 +41,7 @@ const handleDelete=async(id)=>{
   if (window.confirm('Are you sure you wish to delete this item?')){
   try {
     await deleteDoc(doc(db,"events",id))
-    toast("Entry deleted!",{type:"success"})
+    toast("Entry deleted!",{type:"error"})
     }
      catch (e) {
       toast("Error :(",{type:"error"})
@@ -114,9 +114,6 @@ const handleDelete=async(id)=>{
         <DialogContent>
         <Typography> Event Name: {data.ename}</Typography>
         <Typography>Event Organiser: {data.eorg}</Typography>
-          <DialogContentText>
-           Event Details: {data.edesc}
-          </DialogContentText>
         </DialogContent>
         {data.eurl!="null" &&
         <Button variant="contained" onClick={()=>window.open(data.eurl)}>view file</Button>
